@@ -1,3 +1,5 @@
+/* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s*/
+
 /*Array of objects for medium level questions*/
 
 const mediumQuestions= [
@@ -64,6 +66,7 @@ let questionCounter=0;
 let numberOfQuestions=10;
 let currentQuestion;
 let availableQuestions=[];
+let availableAnswers=[];
 
 function setAvailableQuestions () {
     const allQuestions=mediumQuestions.length;
@@ -77,10 +80,28 @@ function newQuestion () {
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
     question.innerHTML=currentQuestion.Question;
+    const index=availableQuestions.indexOf(questionIndex)
+    availableQuestions.splice(index, 1);
+
+    const optionLength=currentQuestion.Options.length;
+    for (let i=0; i<optionLength; i++){
+        availableAnswers.push(i);
+    }
+    for (let i=0; i<optionLength; i++){
+        const option=document.createElement("div");
+        option.innerHTML=currentQuestion.Options[i];
+        option.id=i;
+        option.className="btn";
+        answers.appendChild(option);
+    }
+
 
     questionCounter++;
     updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
+
+   
 }
+
 
 function next () {
     if (questionCounter == numberOfQuestions){
