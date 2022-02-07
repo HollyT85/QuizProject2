@@ -97,12 +97,16 @@ function newQuestion () {
         option.id=i;
         option.className='btn';
         answers.appendChild(option);
-        option.setAttribute('onclick', getResult(this));
+        option.setAttribute('onclick', 'checkResult(this)');
     }
     
 
     questionCounter++;
     updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
+}
+
+function checkResult (optionElement){
+    console.log(optionElement)
 }
 
 
