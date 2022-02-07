@@ -60,7 +60,11 @@ const mediumQuestions= [
 
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
-const answers=document.getElementById('questionAnswers');
+const option1=document.getElementById('option1');
+const option2=document.getElementById('option2');
+const option3=document.getElementById('option3');
+const option4=document.getElementById('option4');
+
 
 let questionCounter=0;
 let numberOfQuestions=10;
@@ -83,23 +87,17 @@ function newQuestion () {
     const index=availableQuestions.indexOf(questionIndex)
     availableQuestions.splice(index, 1);
 
-    const optionLength=currentQuestion.Options.length;
-    for (let i=0; i<optionLength; i++){
-        availableAnswers.push(i);
-    }
-    for (let i=0; i<optionLength; i++){
-        const option=document.createElement("div");
-        option.innerHTML=currentQuestion.Options[i];
-        option.id=i;
-        option.className="btn";
-        answers.appendChild(option);
-    }
+    /*answers*/
 
+    const options=currentQuestion.Options;
+    console.log(options)
+        option1.innerHTML=options[0];
+        option2.innerHTML=options[1];
+        option3.innerHTML=options[2];
+        option4.innerHTML=options[3];
 
     questionCounter++;
     updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
-
-   
 }
 
 
