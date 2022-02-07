@@ -1,6 +1,6 @@
 /*Array of objects for medium level questions*/
 
-let mediumQuestions= [
+const mediumQuestions= [
     {
         Question: "What animal did Queen Pasiphae sleep with before she gave birth to the minotaur?",
         Options:['A white bull','A black cow', 'A golden ram','A brown goat' ],    
@@ -53,20 +53,45 @@ let mediumQuestions= [
     },
     ]
 
+
 /*Extracting IDs from medium level game*/
 
-const questionNumber = document.getElementById('questionNumber');
+const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('questionAnswers');
 
 let questionCounter=0;
+let numberOfQuestions=10;
 let currentQuestion;
 let availableQuestions=[];
 
 function setAvailableQuestions () {
-    const totalQuestions=mediumQuestions.length;
-        for (let i=0; i<totalQuestions; i++){
-        availableQuestions.push(mediumQuestions[i])
-        }
-        console.log(availableQuestions)
+    const allQuestions=mediumQuestions.length;
+    for (let i=0; i<allQuestions; i++){
+        availableQuestions.push(mediumQuestions[i]);
+        } 
+}
+
+function newQuestion () {
+
+    const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
+    currentQuestion=questionIndex;
+    question.innerHTML=currentQuestion.Question;
+
+    questionCounter++;
+    updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
+}
+
+function next () {
+    if (questionCounter == numberOfQuestions){
+    return window.location.assign('endgame.html')
+    }
+    else {
+        newQuestion()
+    }
+}
+
+window.onload=function() {
+    setAvailableQuestions();
+    newQuestion();
 }
