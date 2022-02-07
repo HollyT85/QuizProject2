@@ -44,16 +44,29 @@ let mediumQuestions= [
     {
         Question: "Which of these is Hera goddess of?",
         Options: ['Rivers','Fishing','Women','Children'],
-        correctAnswer: 3
+        correctAnswer: 2
     },
     {
         Question: "In Chinese mythology, Changxi is the mother of what?",
-        
-            option1: 'Twelve moons',
-            option2: 'Twelve stars',
-            option3: 'Twelve planets',
-            option4: 'Twelve meteors',
-        
-        correctAnswer: 1
+        Options: ['Twelve moons', 'Twelve stars','Twelve planets','Twelve meteors'],
+        correctAnswer: 0
     },
     ]
+
+/*Extracting IDs from medium level game*/
+
+const questionNumber = document.getElementById('questionNumber');
+const question=document.getElementById('question');
+const answers=document.getElementById('questionAnswers');
+
+let questionCounter=0;
+let currentQuestion;
+let availableQuestions=[];
+
+function setAvailableQuestions () {
+    const totalQuestions=mediumQuestions.length;
+        for (let i=0; i<totalQuestions; i++){
+        availableQuestions.push(mediumQuestions[i])
+        }
+        console.log(availableQuestions)
+}
