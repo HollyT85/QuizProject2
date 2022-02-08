@@ -2,9 +2,9 @@
 
 
 
-/*Array of objects for medium level questions*/
+/*Array of objects for easy level questions*/
 
-const mediumQuestions= [
+const easyQuestions= [
     {
         Question: "What animal did Queen Pasiphae sleep with before she gave birth to the minotaur?",
         Options:['A white bull','A black cow', 'A golden ram','A brown goat' ],    
@@ -73,7 +73,7 @@ const mediumQuestions= [
     ]
 
 
-/*Extracting IDs from medium level game*/
+/*Extracting IDs from easy level game*/
 
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
@@ -90,9 +90,9 @@ let score=0;
 function setAvailableQuestions () {
 
    
-    const allQuestions=mediumQuestions.length;
+    const allQuestions=easyQuestions.length;
     for (let i=0; i<allQuestions; i++){
-        availableQuestions.push(mediumQuestions[i]);
+        availableQuestions.push(easyQuestions[i]);
         } 
 }
 

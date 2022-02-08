@@ -96,7 +96,7 @@ const answers=document.getElementById('answer-container');
 const finalScore=document.getElementById('finalScore')
 
 let questionCounter=0;
-let numberOfQuestions=10;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
