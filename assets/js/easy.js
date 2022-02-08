@@ -6,48 +6,48 @@
 
 const easyQuestions= [
     {
-        Question: "What animal did Queen Pasiphae sleep with before she gave birth to the minotaur?",
-        Options:['A white bull','A black cow', 'A golden ram','A brown goat' ],    
+        Question: "Which mythological eras does the god Apollo come from?",
+        Options:['Greek & Roman','Roman & Norse', 'Norse & Greek','Celtic & Norse' ],    
         correctAnswer: 0
     },
     {
-        Question: "Who is the God of War in Polynesian mythology?",
-        Options: ['Ares','Ku','Zeus','Kratos'],    
+        Question: "What was Atlas, the Olympian god, known as?",
+        Options: ['Bearer of bad news','Bearer of heavens','Bearer of good news','Bearer of fear'],    
         correctAnswer: 1
     },
     {
-        Question: "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
-        Options: ['Spider','Rabbit','Lizard','Dog'],
+        Question: "In Greek mythology, who is the godddess of wine?",
+        Options: ['Dionysus','Artemis','Hermes','Demeter'],
         correctAnswer: 0
     },
     {
-        Question: "In Greek mythology, who killed Achilles?",
-        Options: ['Troy','Hera','Paris', 'Hermes'] ,     
+        Question: "Who travelled to the underworld to save his wife, Eurydice?",
+        Options: ['Troy','Minos','Orpheus', 'Theseus'] ,     
         correctAnswer: 2
     },
     {
-        Question: "Which of these Roman gods or goddesses doesn't have a Greek counterpart?",
-        Options: ['Venus','Mars','Jupiter','Janus'],
+        Question: "Who was the 'King of Gods' in Ancient Greek mythology?",
+        Options: ['Hades','Poseidon','Odin','Zeus'],
         correctAnswer: 3
     },
     {
-        Question: "Hodur is blind",
+        Question: "Pandora had a box",
         Options: ['True', 'False'],
         correctAnswer: 0
     },
     {
-        Question: "Hel was the daughter of which Norse god?",
-        Options:['Odin','Loki','Thor','Tyr'],      
+        Question: "Who led the Argonauts in search of the Golden Fleece?",
+        Options:['John','Jason','Mark','Clive'],      
         correctAnswer: 1
     },
     {
-        Question: "What are the names of the first humans in Norse mythology?",
-        Options: ['Adam & Eve','Shu & Tefnut','Askr & Embla','Prometheus & Athena'],      
+        Question: "Which creature is said to be half man, half horse?",
+        Options: ['Siren','Satyr','Centaur','Minotaur'],      
         correctAnswer: 2
     }, 
     {
-        Question: "According to the Egyptian myth of Osiris, who murdered Osiris?",
-        Options: ['Anubis','Mina','Sekmet','Seth'],
+        Question: "What did Medusa have for hair?",
+        Options: ['Hair','Eels','Curls','Snakes'],
         correctAnswer: 3
     },
     {
