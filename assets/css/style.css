@@ -65,3 +65,11 @@ body {
 .table td {
     border: 1px solid black;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}

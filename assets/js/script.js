@@ -61,14 +61,19 @@ const mediumQuestions= [
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
+const updateScore=document.getElementById('score');
 
 let questionCounter=0;
 let numberOfQuestions=10;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
+let score=0;
+let points=1;
 
 function setAvailableQuestions () {
+
+   
     const allQuestions=mediumQuestions.length;
     for (let i=0; i<allQuestions; i++){
         availableQuestions.push(mediumQuestions[i]);
@@ -76,6 +81,11 @@ function setAvailableQuestions () {
 }
 
 function newQuestion () {
+
+    if (questionCounter == numberOfQuestions){
+        return window.location.assign('endgame.html')
+        }
+        
 
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
@@ -88,6 +98,8 @@ function newQuestion () {
     for (let i=0; i<allOptions; i++){
         availableAnswers.push(i);
     }
+
+    answers.innerHTML='';
     for(let i=0; i<allOptions; i++){
         const optionIndex=availableAnswers[Math.floor(Math.random()*availableAnswers.length)];
         const index2=availableAnswers.indexOf(optionIndex);
@@ -105,19 +117,30 @@ function newQuestion () {
     updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
 }
 
-function checkResult (optionElement){
-    console.log(optionElement)
-}
-
-
-function next () {
-    if (questionCounter == numberOfQuestions){
-    return window.location.assign('endgame.html')
-    }
+function checkResult (element){
+    const userAnswer=element.id;
+    if (userAnswer==currentQuestion.correctAnswer){
+        element.classList.add('correct')
+    } 
     else {
-        newQuestion()
+        element.classList.add('incorrect')
     }
+    if (userAnswer==currentQuestion.correctAnswer) {
+        increaseScore(points)
+    }
+    setTimeout(function() {
+        newQuestion()
+    }, 900)
 }
+
+function increaseScore (num) {
+    score +=num;
+    updateScore.innerHTML=score;
+
+}
+
+
+
 
 
     setAvailableQuestions();
