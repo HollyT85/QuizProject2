@@ -10,6 +10,7 @@ const mediumQuestions= [
         Options:['A white bull','A black cow', 'A golden ram','A brown goat' ],    
         correctAnswer: 0
     },
+    
     {
         Question: "Who is the God of War in Polynesian mythology?",
         Options: ['Ares','Ku','Zeus','Kratos'],    

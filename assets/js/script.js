@@ -11,6 +11,11 @@ const mediumQuestions= [
         correctAnswer: 0
     },
     {
+        Question: "Hercules is from which mythological era?",
+        Options: ['Greek', 'Egyptian', 'Roman', 'Celtic'],
+        correctAnswer:2
+    },
+    {
         Question: "Who is the God of War in Polynesian mythology?",
         Options: ['Ares','Ku','Zeus','Kratos'],    
         correctAnswer: 1
