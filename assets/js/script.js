@@ -69,7 +69,6 @@ let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
 let score=0;
-let points=1;
 
 function setAvailableQuestions () {
 
@@ -93,7 +92,7 @@ function newQuestion () {
     const index=availableQuestions.indexOf(questionIndex)
     availableQuestions.splice(index, 1);
 
-    /*answers*/
+    //answers
     const allOptions=currentQuestion.Options.length;
     for (let i=0; i<allOptions; i++){
         availableAnswers.push(i);
@@ -102,11 +101,12 @@ function newQuestion () {
     answers.innerHTML='';
     for(let i=0; i<allOptions; i++){
         const optionIndex=availableAnswers[Math.floor(Math.random()*availableAnswers.length)];
+        
         const index2=availableAnswers.indexOf(optionIndex);
         availableAnswers.splice(index2,1);
         const option=document.createElement('div');
-        option.innerHTML=currentQuestion.Options[i];
-        option.id=i;
+        option.innerHTML=currentQuestion.Options[optionIndex]; 
+        option.id=optionIndex;
         option.className='btn';
         answers.appendChild(option);
         option.setAttribute('onclick', 'checkResult(this)');
@@ -121,27 +121,19 @@ function checkResult (element){
     const userAnswer=element.id;
     if (userAnswer==currentQuestion.correctAnswer){
         element.classList.add('correct')
+        score++;
     } 
     else {
         element.classList.add('incorrect')
     }
-    if (userAnswer==currentQuestion.correctAnswer) {
-        increaseScore(points)
-    }
+    
     setTimeout(function() {
         newQuestion()
     }, 900)
 }
 
-function increaseScore (num) {
-    score +=num;
-    updateScore.innerHTML=score;
-
-}
 
 
+setAvailableQuestions();
+newQuestion();
 
-
-
-    setAvailableQuestions();
-    newQuestion();
