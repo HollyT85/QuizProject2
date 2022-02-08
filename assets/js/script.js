@@ -31,6 +31,11 @@ const mediumQuestions= [
         correctAnswer: 3
     },
     {
+        Question: "Hodur is blind",
+        Options: ['True', 'False'],
+        correctAnswer: 0
+    },
+    {
         Question: "Hel was the daughter of which Norse god?",
         Options:['Odin','Loki','Thor','Tyr'],      
         correctAnswer: 1
@@ -51,10 +56,20 @@ const mediumQuestions= [
         correctAnswer: 2
     },
     {
+        Question: "Nike is the Greek goddess of family",
+        Options: ['True','False'],
+        correctAnswer: 1
+    },
+    {
         Question: "In Chinese mythology, Changxi is the mother of what?",
         Options: ['Twelve moons', 'Twelve stars','Twelve planets','Twelve meteors'],
         correctAnswer: 0
     },
+    {
+        Question: "Sekmhet is the Egyptian goddess of war",
+        Options:['True', 'False'],
+        correctAnswer:0
+    }
     ]
 
 
