@@ -2,79 +2,49 @@
 
 
 
-/*Array of objects for medium level questions*/
+/*Array of objects for hard level questions*/
 
-const mediumQuestions= [
+const hardQuestions= [
     {
-        Question: "What animal did Queen Pasiphae sleep with before she gave birth to the minotaur?",
-        Options:['A white bull','A black cow', 'A golden ram','A brown goat' ],    
-        correctAnswer: 0
+        Question: "What immense strcture is referred to in Norse mythology as the Yggdrasil?",
+        Options:['Upper Sacred Tree', 'Lower Sacred Tree','Central Sacred Tree' ],    
+        correctAnswer: 2
     },
     
     {
-        Question: "Who is the God of War in Polynesian mythology?",
-        Options: ['Ares','Ku','Zeus','Kratos'],    
-        correctAnswer: 1
-    },
-    {
-        Question: "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
-        Options: ['Spider','Rabbit','Lizard','Dog'],
+        Question: "Nidhogg is a mythical creature from which mythological era?",
+        Options: ['Norse','Greek','Polynesian','Roman'],    
         correctAnswer: 0
     },
     {
-        Question: "In Greek mythology, who killed Achilles?",
-        Options: ['Troy','Hera','Paris', 'Hermes'] ,     
-        correctAnswer: 2
-    },
-    {
-        Question: "Which of these Roman gods or goddesses doesn't have a Greek counterpart?",
-        Options: ['Venus','Mars','Jupiter','Janus'],
+        Question: "Who is the daughter of King Minos?",
+        Options: ['Hela','Helen','Mina','Ariadne'],
         correctAnswer: 3
     },
     {
-        Question: "Hodur is blind",
-        Options: ['True', 'False'],
-        correctAnswer: 0
-    },
-    {
-        Question: "Hel was the daughter of which Norse god?",
-        Options:['Odin','Loki','Thor','Tyr'],      
+        Question: "Which of the following Mesopotamin mythological figures was not a deity?",
+        Options: ['Enlil','Sumer','Sin', 'Enko'] ,     
         correctAnswer: 1
     },
     {
-        Question: "What are the names of the first humans in Norse mythology?",
-        Options: ['Adam & Eve','Shu & Tefnut','Askr & Embla','Prometheus & Athena'],      
-        correctAnswer: 2
-    }, 
+        Question: "What was one of the elements of the chain that bound Fenrir made of?",
+        Options: ['Breath of a fish','Scale of a snake','Tooth of a dragon','Skin of a siren'],
+        correctAnswer: 0
+    },
     {
-        Question: "According to the Egyptian myth of Osiris, who murdered Osiris?",
-        Options: ['Anubis','Mina','Sekmet','Seth'],
+        Question: "Nefertum is the Egyptian goddes of what?",
+        Options: ['Soap', 'Eyelashes', 'Hair', 'Perfume'],
         correctAnswer: 3
     },
     {
-        Question: "Which of these is Hera goddess of?",
-        Options: ['Rivers','Fishing','Women','Children'],
-        correctAnswer: 2
-    },
-    {
-        Question: "Nike is the Greek goddess of family",
-        Options: ['True','False'],
+        Question: "The Graeve sisters lived in a can under a rock shaped like what?",
+        Options:['A fish','A weasel','A star','A rabbit'],      
         correctAnswer: 1
     },
-    {
-        Question: "In Chinese mythology, Changxi is the mother of what?",
-        Options: ['Twelve moons', 'Twelve stars','Twelve planets','Twelve meteors'],
-        correctAnswer: 0
-    },
-    {
-        Question: "Sekmhet is the Egyptian goddess of war",
-        Options:['True', 'False'],
-        correctAnswer:0
-    }
     ]
 
 
-/*Extracting IDs from medium level game*/
+/*Extracting IDs from Hard level game*/
 
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
@@ -91,9 +61,9 @@ let score=0;
 function setAvailableQuestions () {
 
    
-    const allQuestions=mediumQuestions.length;
+    const allQuestions=hardQuestions.length;
     for (let i=0; i<allQuestions; i++){
-        availableQuestions.push(mediumQuestions[i]);
+        availableQuestions.push(hardQuestions[i]);
         } 
 }
 
