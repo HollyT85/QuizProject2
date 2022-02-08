@@ -40,6 +40,71 @@ const hardQuestions= [
         Options:['A fish','A weasel','A star','A rabbit'],      
         correctAnswer: 1
     },
+    {
+        Question: "Where did Scylla, the six headed monster, live?",
+        Options:['The Tyrrhenian Sea','The Messina Strait','The Indian Ocean','The Adriatic Sea'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "From which part of the body was Amaterasu born?",
+        Options:['Left eye','Right eye','Nose','Mouth'],      
+        correctAnswer: 0
+    },
+    {
+        Question: "Which group of people believed the world was created by a hare?",
+        Options:['Powhatan','Pima','Sioux','Ojibwa'],      
+        correctAnswer: 0
+    },
+    {
+        Question: "What was Endymion's punishment for achievement immortality?",
+        Options:['Eternal sleep','Eternal hunger','Eternal restlessness','Eternal happiness'],      
+        correctAnswer: 0
+    },
+    {
+        Question: "who is believed to have split heaven and earth in Sumerian mythology?",
+        Options:['Ninmah','Gilgamesh','Enki','Enlil'],      
+        correctAnswer: 3
+    },
+    {
+        Question: "Who was the founder of Incan civilization?",
+        Options:['Pizarro','Machu Pichu','Manco Capac','Cusco'],      
+        correctAnswer: 2
+    },
+    {
+        Question: "What did the Pima believe created the world?",
+        Options:['A butterfly','A hare','A bird','A dog'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "Who beheaded Medusa?",
+        Options:['Andromeda','Perseus','Poseidon','Cetus'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "Who ruled the Celtic Otherworld?",
+        Options:['Badb','Arawn','Dagda','Brigid'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "Who is the only god to be physically ugly?",
+        Options:['Erebus','Hephaestus','Zeus','Dionysus'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "The demi-god, Kamapua, was said to be half-man and half what?",
+        Options:['Horse','Rat','Pig','Dog'],      
+        correctAnswer: 2
+    },
+    {
+        Question: "Who is known as one of the most evil Yokai?",
+        Options:['Kappa','Bake-danuki','Tamamo no Mae','Kitsune'],      
+        correctAnswer: 2
+    },
+    {
+        Question: "Circe is the daughter of Helios",
+        Options:['False', 'True'],      
+        correctAnswer: 1
+    },
     ]
 
 
@@ -51,7 +116,7 @@ const answers=document.getElementById('answer-container');
 const finalScore=document.getElementById('finalScore')
 
 let questionCounter=0;
-let numberOfQuestions=10;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];

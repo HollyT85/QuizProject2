@@ -11,6 +11,16 @@ const mediumQuestions= [
         correctAnswer: 0
     },
     {
+        Question: "Maui is a god",
+        Options:['True', 'False'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "Who is the snake-like river god of Zambezi?",
+        Options:['Orisha','Eshu','Anansi','Nyami Nyami'],      
+        correctAnswer: 3
+    },
+    {
         Question: "Which of these is not a god or goddess in Norse mythology?",
         Options: ['Freya', 'Frigg', 'Balder', 'Brigid'],
         correctAnswer: 3
@@ -78,6 +88,16 @@ const mediumQuestions= [
     {
         Question: "In Chinese mythology, Changxi is the mother of what?",
         Options: ['Twelve moons', 'Twelve stars','Twelve planets','Twelve meteors'],
+        correctAnswer: 0
+    },
+    {
+        Question: "Which of these is not a Hawaiian deity?",
+        Options:['Pele','Laka','Lono','Maui'],      
+        correctAnswer: 3
+    },
+    {
+        Question: "Dagda is a Celtic god",
+        Options:['True', 'False'],      
         correctAnswer: 0
     },
     {

@@ -11,6 +11,11 @@ const easyQuestions= [
         correctAnswer: 0
     },
     {
+        Question: "Baron Samedi is the voodoo god of the dead",
+        Options:['True','False'],      
+        correctAnswer: 0
+    },
+    {
         Question: "What was Atlas, the Olympian god, known as?",
         Options: ['Bearer of bad news','Bearer of heavens','Bearer of good news','Bearer of fear'],    
         correctAnswer: 1
@@ -61,15 +66,45 @@ const easyQuestions= [
         correctAnswer: 1
     },
     {
-        Question: "In Chinese mythology, Changxi is the mother of what?",
-        Options: ['Twelve moons', 'Twelve stars','Twelve planets','Twelve meteors'],
+        Question: "Cetus was sent to bring terror to Aethiopia",
+        Options: ['True', 'False'],
         correctAnswer: 0
     },
     {
-        Question: "Sekmhet is the Egyptian goddess of war",
-        Options:['True', 'False'],
+        Question: "How did sirens lure sailors to their death?",
+        Options:['Singing to them', 'Shouting hello', 'Prending to drown', 'Waving'],
         correctAnswer:0
-    }
+    },
+    {
+        Question: "Valhalla is for anyone who dies",
+        Options:['False', 'True'],      
+        correctAnswer: 0
+    },
+    {
+        Question: "What did Cronus do to his children?",
+        Options:['Teach them','Love them','Abandon them','Eat them'],      
+        correctAnswer:3
+    },
+    {
+        Question: "Ragnarok is the world-ending battle between gods",
+        Options:['True', 'False'],      
+        correctAnswer: 0
+    },
+    {
+        Question: "Who ruled the world before the Olympians?",
+        Options:['No-one','Titans','Primordials','Immortals'],      
+        correctAnswer: 1
+    },
+    {
+        Question: "Which is not a preferred offering of the Hawaiian volcano Goddess?",
+        Options:['Gin','Flowers','Food','Candles'],      
+        correctAnswer: 3
+    },
+    {
+        Question: "When one of the Learnean Hydra's twelve heads were chopped off, how many replaced it?",
+        Options:['None','Two','Ten','Five'],      
+        correctAnswer: 1
+    },
     ]
 
 
@@ -81,7 +116,7 @@ const answers=document.getElementById('answer-container');
 const finalScore=document.getElementById('finalScore')
 
 let questionCounter=0;
-let numberOfQuestions=10;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
