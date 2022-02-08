@@ -1,6 +1,6 @@
 /* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s*/
 
-let myStorage=window.localStorage
+
 
 /*Array of objects for medium level questions*/
 
@@ -123,8 +123,8 @@ function checkResult (element){
     if (userAnswer==currentQuestion.correctAnswer){
         element.classList.add('correct')
         score++;
-        myStorage.setItem('highscore',score)
-        console.log (myStorage)
+        localStorage.setItem('highscore',score)
+        
     } 
     else {
         element.classList.add('incorrect')
