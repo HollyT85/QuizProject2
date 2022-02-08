@@ -11,6 +11,16 @@ const mediumQuestions= [
         correctAnswer: 0
     },
     {
+        Question: "Which of these is not a god or goddess in Norse mythology?",
+        Options: ['Freya', 'Frigg', 'Balder', 'Brigid'],
+        correctAnswer: 3
+    },
+    {
+        Question: "In Norse Mythology, what is the name of the serpent that eats the roots of the ash tree, Yggdrasil?",
+        Options: ['Nidhogg', 'Drasil', 'Cantaun', 'Beowulf'],
+        correctAnswer:0
+    },
+    {
         Question: "Hercules is from which mythological era?",
         Options: ['Greek', 'Egyptian', 'Roman', 'Celtic'],
         correctAnswer:2

@@ -6,11 +6,10 @@
 
 const hardQuestions= [
     {
-        Question: "What immense strcture is referred to in Norse mythology as the Yggdrasil?",
+        Question: "What immense structure is referred to in Norse mythology as the Yggdrasil?",
         Options:['Upper Sacred Tree', 'Lower Sacred Tree','Central Sacred Tree' ],    
         correctAnswer: 2
     },
-    
     {
         Question: "Nidhogg is a mythical creature from which mythological era?",
         Options: ['Norse','Greek','Polynesian','Roman'],    
