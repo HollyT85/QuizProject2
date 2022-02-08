@@ -1,5 +1,7 @@
 /* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s*/
 
+let myStorage=window.localStorage
+
 /*Array of objects for medium level questions*/
 
 const mediumQuestions= [
@@ -61,7 +63,7 @@ const mediumQuestions= [
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
-const updateScore=document.getElementById('score');
+const finalScore=document.getElementById('finalScore')
 
 let questionCounter=0;
 let numberOfQuestions=10;
@@ -83,9 +85,8 @@ function newQuestion () {
 
     if (questionCounter == numberOfQuestions){
         return window.location.assign('endgame.html')
-        }
-        
-
+    }
+     
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
     question.innerHTML=currentQuestion.Question;
@@ -122,6 +123,8 @@ function checkResult (element){
     if (userAnswer==currentQuestion.correctAnswer){
         element.classList.add('correct')
         score++;
+        myStorage.setItem('highscore',score)
+        console.log (myStorage)
     } 
     else {
         element.classList.add('incorrect')
@@ -131,8 +134,6 @@ function checkResult (element){
         newQuestion()
     }, 900)
 }
-
-
 
 setAvailableQuestions();
 newQuestion();
