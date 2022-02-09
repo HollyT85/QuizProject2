@@ -29,6 +29,10 @@ body {
     font-family: 'Caesar Dressing', cursive;
 }
 
+.holder {
+    display:flex;
+}
+
 .container {
     width: 80vw;
     height: 80vh;
@@ -97,9 +101,9 @@ body {
 /*Interactivity*/
 
 .correct {
-    background-color: yellow;
+    background-color: #2e145d;
 }
 
 .incorrect {
-    background-color: yellow;
+    background-color: #2e145d;
 }
