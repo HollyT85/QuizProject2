@@ -1,8 +1,4 @@
-/* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s*/
 
-
-
-/*Array of objects for hard level questions*/
 
 const hardQuestions= [
     {
@@ -107,9 +103,6 @@ const hardQuestions= [
     },
     ]
 
-
-/*Extracting IDs from Hard level game*/
-
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
@@ -143,7 +136,7 @@ function newQuestion () {
     const index=availableQuestions.indexOf(questionIndex)
     availableQuestions.splice(index, 1);
 
-    //answers
+
     const allOptions=currentQuestion.Options.length;
     for (let i=0; i<allOptions; i++){
         availableAnswers.push(i);
