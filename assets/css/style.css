@@ -98,7 +98,7 @@ body {
     font-family: 'Caesar Dressing', cursive;
 }
 
-/*Interactivity*/
+/*responsiveness for users based on their actions*/
 
 .correct {
     background-color: #2e145d;
