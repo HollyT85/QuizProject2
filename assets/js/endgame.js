@@ -4,3 +4,4 @@ const userScore=document.getElementById('score');
 const username=document.getElementById('username');
 
 userScore.innerHTML=latestScore;
+

@@ -8,16 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
+     <!--Background Image-->
+     <img src="./assets/images/background.jpg" class="background-image" alt="myth map">
+     <!--Container to hold the container so quiz is over background image-->
+     <div class="container-container">
     <div class="container flex-column flex-center">
         <div id="highScores">
-            <h2 id="finalScore" class="final-score">Leaderboard</h2>
-            <p id="newHighScore"></p>
+            <h2 id="finalScore" class="sub-title">Leaderboard</h2>
+            <p id="leaderboard-score"></p>
         </div>
     </div>
+    </div>  
     <!--JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="assets/js/leaderboard.js"></script>

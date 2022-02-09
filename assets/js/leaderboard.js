@@ -1,4 +1,4 @@
 const latestScore=localStorage.getItem('highscore');
-const newHighScore=document.getElementById('newHighScore');
+const leaderboardScore=document.getElementById('leaderboardScore')
 
-highScoreDisplay.innerHTML=latestScore;
+leaderboardScore.innerHTML=latestScore;
