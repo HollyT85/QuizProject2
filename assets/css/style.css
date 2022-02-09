@@ -29,11 +29,11 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 80rem;
-    margin: 50px auto;
+    margin: 20px auto;
     padding:2rem;
     background-color: rgba(188, 123, 59, 0.7);
     border-radius: 20px;
-    position: relative;
+    border: black 20px double;
 }
 
 .flex-column {
