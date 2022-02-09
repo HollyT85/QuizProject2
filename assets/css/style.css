@@ -1,8 +1,11 @@
 body {
-    background-color: aliceblue;
-    background: url('/assets/images/background.jpg');
-    background-repeat: no-repeat;
+    background-image: url("/assets/images/background.jpg");
     background-size: cover;
+}
+
+.background-img {
+    width: 100vw;
+    position: relative;
 }
 
 * {
@@ -30,6 +33,7 @@ body {
     padding:2rem;
     background-color: rgba(188, 123, 59, 0.7);
     border-radius: 20px;
+    position: relative;
 }
 
 .flex-column {
