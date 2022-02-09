@@ -1,7 +1,7 @@
 /*Whole page styling*/
 
 body {
-    background-image: url("../assets/images/background.jpg");
+    background-image: url("/assets/images/background.jpg");
     background-size: cover;
 }
 
@@ -42,7 +42,7 @@ body {
     font-size: 5.4rem;
     color: #18191a;
     margin-bottom: 5rem;
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Caesar Dressing', cursive;
 }
 
 .btn {
