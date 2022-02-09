@@ -1,8 +1,4 @@
-/* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s*/
-
-
-
-/*Array of objects for medium level questions*/
+//Array of objects for medium level questions*/
 
 const mediumQuestions= [
     {
@@ -115,12 +111,17 @@ const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
 const finalScore=document.getElementById('finalScore')
 
+//Quiz features
+
 let questionCounter=0;
 let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
 let score=0;
+
+/* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s I used this video to help with having varying 
+numbers of answer boxes to allow for a variety of question responses*/
 
 function setAvailableQuestions () {
 
@@ -132,18 +133,18 @@ function setAvailableQuestions () {
 }
 
 function newQuestion () {
-
+//send user to end page when number of questions are reached
     if (questionCounter == numberOfQuestions){
         return window.location.assign('endgame.html')
     }
-     
+//randomized questions and entering into HTML
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
     question.innerHTML=currentQuestion.Question;
     const index=availableQuestions.indexOf(questionIndex)
     availableQuestions.splice(index, 1);
 
-    //answers
+//randomized answers and entering into HTML
     const allOptions=currentQuestion.Options.length;
     for (let i=0; i<allOptions; i++){
         availableAnswers.push(i);
@@ -162,24 +163,23 @@ function newQuestion () {
         answers.appendChild(option);
         option.setAttribute('onclick', 'checkResult(this)');
     }
-    
-
     questionCounter++;
     updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
 }
 
+//Check answers and add class to increase the score
 function checkResult (element){
     const userAnswer=element.id;
     if (userAnswer==currentQuestion.correctAnswer){
         element.classList.add('correct')
         score++;
+//local storage to access score on end page and also for a leaderboard
         localStorage.setItem('highscore',score)
-        
     } 
     else {
         element.classList.add('incorrect')
     }
-    
+//move on to new question after a set time so user doesn't need to click next
     setTimeout(function() {
         newQuestion()
     }, 900)

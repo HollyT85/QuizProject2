@@ -95,6 +95,10 @@ body {
     background-color: #261342;
 }
 
+.btn:hover{
+    box-shadow: 2px 2px 2px 2px #c0c0c0 inset;
+}
+
 .question-number, .question, .score, .sub-title, .score, .correct-answers {
     font-size: 3rem;
     color: black;
