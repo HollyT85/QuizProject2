@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding:0;
+    background-color: #2e145d;
 }
 
 .img-holder {
@@ -115,3 +116,12 @@ body {
 .btn:hover{
     box-shadow: 2px 2px 2px 2px #c0c0c0 inset;
 }
+
+/*mobile background*/
+
+@media(max-width: 800px) {
+    .background-image {
+        display: none;
+    }
+}
+
