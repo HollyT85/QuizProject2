@@ -91,14 +91,6 @@ body {
     font-family: 'Caesar Dressing', cursive;
 }
 
-.btn-hover:hover {
-    background-color: #261342;
-}
-
-.btn:hover{
-    box-shadow: 2px 2px 2px 2px #c0c0c0 inset;
-}
-
 .question-number, .question, .score, .sub-title, .score, .correct-answers {
     font-size: 3rem;
     color: black;
@@ -114,4 +106,12 @@ body {
 
 .incorrect {
     background-color: #2e145d;
+}
+
+.btn-hover:hover {
+    background-color: #261342;
+}
+
+.btn:hover{
+    box-shadow: 2px 2px 2px 2px #c0c0c0 inset;
 }
