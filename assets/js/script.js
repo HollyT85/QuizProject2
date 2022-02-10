@@ -399,7 +399,7 @@ highScoresList.innerText=localStorage.getItem('highscores')
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=3;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
