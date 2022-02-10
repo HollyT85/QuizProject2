@@ -382,11 +382,15 @@ const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
+const saveScoreButton=document.getElementById('saveScore');
+
+//local storage
+const recentScore=localStorage.getItem('highscore')
 
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=15;
+let numberOfQuestions=3;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -428,6 +432,10 @@ leaderboardBtn.addEventListener('click', ()=>{
     leaderboardPage.classList.remove('hide');
 })
 
+saveScoreButton.addEventListener('click', ()=> {
+    saveHighScore();
+})
+
 //Start of Game
 
 function setEasyQuestion () {
@@ -463,9 +471,12 @@ function setHardQuestion () {
 function newQuestion () {
 //send user to end page when number of questions are reached
     if (questionCounter == numberOfQuestions){
+//local storage to access score on end page and also for a leaderboard
+        
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
         userScore.innerHTML=Math.round(score/15*100);
+        localStorage.setItem('highscore', score)
     }
 //randomized questions and entering into HTML
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
@@ -503,8 +514,6 @@ function checkResult (element){
     if (userAnswer==currentQuestion.correctAnswer){
         element.classList.add('correct')
         score++;
-//local storage to access score on end page and also for a leaderboard
-        localStorage.setItem('highscore',score)
     } 
     else {
         element.classList.add('incorrect')
@@ -515,5 +524,9 @@ function checkResult (element){
     }, 900)
 }
 
+function saveHighScore () {
+    
+    console.log('saved')
+}
 
 
