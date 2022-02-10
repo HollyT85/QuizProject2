@@ -363,7 +363,7 @@ const questions= [
     }
     ]
 
-/*Extracting IDs from medium level game*/
+/*Extracting IDs from HTML*/
 
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
@@ -379,8 +379,22 @@ let availableQuestions=[];
 let availableAnswers=[];
 let score=0;
 
-/* https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s I used this video to help with having varying 
-numbers of answer boxes to allow for a variety of question responses*/
+//Filter Questions via difficulty
+//easy
+const easyQuestions=questions.filter(function(question){
+    return question.difficulty = 'easy'
+})
+//medium
+const mediumQuestions=questions.filter(function(question){
+    return question.difficulty = 'medium'
+})
+//Hard
+const hardQuestions=questions.filter(function (question){
+    return question.difficulty = 'hard'
+})
+
+
+//Start of Game
 
 function setAvailableQuestions () {
 
