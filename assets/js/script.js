@@ -368,7 +368,7 @@ const questions= [
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
-const finalScore=document.getElementById('finalScore');
+const userScore=document.getElementById('score');
 
 //Different 'page' containers
 
@@ -384,7 +384,7 @@ const hardButton=document.getElementById('hard');
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=15;
+let numberOfQuestions=3;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -421,8 +421,6 @@ hardButton.addEventListener ('click', ()=>{
     setHardQuestion()
 })
 
-
-
 //Start of Game
 
 function setEasyQuestion () {
@@ -458,7 +456,9 @@ function setHardQuestion () {
 function newQuestion () {
 //send user to end page when number of questions are reached
     if (questionCounter == numberOfQuestions){
-        return window.location.assign('endgame.html')
+        gamePage.classList.add('hide');
+        endPage.classList.remove('hide');
+        userScore.innerHTML=score;
     }
 //randomized questions and entering into HTML
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
