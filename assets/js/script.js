@@ -436,10 +436,6 @@ leaderboardBtn.addEventListener('click', ()=>{
     leaderboardPage.classList.remove('hide');
 })
 
-saveScoreButton.addEventListener('click', ()=> {
-    saveHighScore();
-})
-
 //Start of Game
 
 function setEasyQuestion () {
@@ -528,8 +524,8 @@ function checkResult (element){
     }, 900)
 }
 
-function saveHighScore () {
-
+function saveHighScore (e) {
+    e.preventDefault();
     const submitScore = {
         score: recentScore,
         name: username.value
