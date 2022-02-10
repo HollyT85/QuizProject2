@@ -160,7 +160,7 @@ const questions= [
     {
         Question: "Pandora had a box",
         Options: ['True', 'False'],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: "easy"
     },
     {
@@ -384,7 +384,7 @@ const hardButton=document.getElementById('hard');
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=15;
+let numberOfQuestions=3;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -458,7 +458,7 @@ function newQuestion () {
     if (questionCounter == numberOfQuestions){
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
-        userScore.innerHTML=score;
+        userScore.innerHTML=Math.round(score/3*100);
     }
 //randomized questions and entering into HTML
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
