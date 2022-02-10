@@ -140,7 +140,7 @@ const questions= [
         difficulty: "easy"
     },
     {
-        Question: "In Greek mythology, who is the godddess of wine?",
+        Question: "In Greek mythology, who is the god of wine?",
         Options: ['Dionysus','Artemis','Hermes','Demeter'],
         correctAnswer: 0,
         difficulty: "easy"
@@ -182,8 +182,8 @@ const questions= [
         difficulty: "easy"
     },
     {
-        Question: "Which of these is Hera goddess of?",
-        Options: ['Rivers','Fishing','Women','Children'],
+        Question: "What was constructed to keep the minotaur captive?",
+        Options: ['An island','A village','A labyrinth','A dungeon'],
         correctAnswer: 2,
         difficulty: "easy"
     },
