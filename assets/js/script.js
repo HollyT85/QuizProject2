@@ -368,7 +368,18 @@ const questions= [
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
-const finalScore=document.getElementById('finalScore')
+const finalScore=document.getElementById('finalScore');
+
+//Different 'page' containers
+
+const homePage=document.getElementById('homePage');
+const gamePage=document.getElementById('gamePage');
+const endPage=document.getElementById('endPage');
+
+//Buttons
+const easyButton=document.getElementById('easy');
+const mediumButton=document.getElementById('medium');
+const hardButton=document.getElementById('hard');
 
 //Quiz features
 
@@ -380,11 +391,11 @@ let availableAnswers=[];
 let score=0;
 
 //Filter Questions via difficulty
-//easy
+//Easy
 const easyQuestions=questions.filter(function(question){
     return question.difficulty = 'easy'
 })
-//medium
+//Medium
 const mediumQuestions=questions.filter(function(question){
     return question.difficulty = 'medium'
 })
