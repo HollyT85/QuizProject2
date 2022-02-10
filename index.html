@@ -12,18 +12,43 @@
     <title>Document</title>
 </head>
 <body>
+<!--Home Page-->
+    <div class="home-page container flex-column flex-center text-center">
+        <h1 class="title">Mythology <br> Quiz</h1>
+        <h2 class="tag-line">Do you know your Zeus from your Odin? <br>Your Centaur from your Minotaur?<br> Find out here!</h2>
+        <button type="button" class="btn-hover" id="easy">Play Level 1</a>
+        <button type="button" class="btn-hover" id="medium">Play Level 2</a>
+        <button type="button" class="btn-hover" id="hard">Play level 3</a>
+        <!--<a href="leaderboard.html" class="btn">Leaderboard</a>-->
+    </div>
 
-  
-        <div class="home-page container flex-column flex-center text-center">
-            <h1 class="title">Mythology <br> Quiz</h1>
-            <h2 class="tag-line">Do you know your Zeus from your Odin? <br>Your Centaur from your Minotaur?<br> Find out here!</h2>
-            <a href="easygame.html" class="btn-hover">Play Level 1</a>
-            <a href="mediumgame.html" class="btn-hover">Play Level 2</a>
-            <a href="hardgame.html" class="btn-hover">Play level 3</a>
-            <!--<a href="leaderboard.html" class="btn">Leaderboard</a>-->
+<!--Game Page-->
+    <div class="question-box container flex-column flex-center hide">
+<!--Question Number Container-->
+        <div class="holder">
+            <p class="sub-title">Question No: </p>
+            <div class="question-number" id="questionNumber"></div>
+        </div>
+<!--Question & Answers-->
+        <div class="question text-center" id="question"></div>   
+        <div id="answer-container"></div>
+    </div>
+
+<!--End Page-->
+    <div class="end-page container flex-column flex-center hide">
+        <h2 class="sub-title">Results</h2>
+        <p class="sub-title">Score:</p>
+        <p class="sub-title" id="score"></p>
+        <!--<p class="sub-title">Save your score<br>Enter Name:</p>
+        <input type="text" name="name" class="btn" id="username" placeholder="Enter Name" required>
+        <button class="btn" id="saveScore" type="submit" onclick="saveHighScore">Save</button>-->
+        <a href="index.html" class="btn-hover">Home</a>
+        <!--<a href="mediumgame.html" class="btn">Play again</a>-->
         </div>
 
 <!--JS-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="assets/js/easy.js"></script>
     
 </body>
 </html>
