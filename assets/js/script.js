@@ -369,7 +369,6 @@ const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
 const userScore=document.getElementById('score');
-const username=document.getElementById('username');
 
 //Different 'page' containers
 
@@ -383,13 +382,19 @@ const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
-const saveScoreButton=document.getElementById('saveScore');
+
 
 //local storage
-const recentScore=localStorage.getItem('currentScore');
-const highScores=JSON.parse(localStorage.getItem('highScores')) || {};
-JSON.parse(localStorage.getItem('highScores'));
+const username=document.getElementById('username');
+const saveScore=document.getElementById('saveScore');
 
+const highScores=JSON.parse(localStorage.getItem('highScores')) || [];
+
+//Leaderboard
+
+const highScoresList=document.getElementById('highScoresList');
+
+highScoresList.innerText=localStorage.getItem('highscores')
 
 //Quiz features
 
@@ -527,9 +532,18 @@ function checkResult (element){
 function saveHighScore (e) {
     e.preventDefault();
     const submitScore = {
-        score: recentScore,
-        name: username.value
+        name: username.value,
+        score: localStorage.getItem('currentScore')
+        
     }
+
+    highScores.push(submitScore);
+    highScores.sort((a, b) => {
+        return b.score-a.score
+    })
+    highScores.splice(5);
+    localStorage.setItem('highscores',JSON.stringify(highScores));
+    console.log(localStorage.getItem('highscores'))
     
 }
 
