@@ -97,11 +97,13 @@ body {
 /*responsiveness for users based on their actions*/
 
 .correct {
-    background-color: #2e145d;
+    background-color: #00A36C;
+    color:#660000
 }
 
 .incorrect {
-    background-color: #2e145d;
+    background-color: #660000;
+    color:#00A36C;
 }
 
 .btn-hover:hover {
