@@ -393,27 +393,66 @@ let score=0;
 //Filter Questions via difficulty
 //Easy
 const easyQuestions=questions.filter(function(question){
-    return question.difficulty = 'easy'
+    return question.difficulty == 'easy'
 })
+
 //Medium
 const mediumQuestions=questions.filter(function(question){
-    return question.difficulty = 'medium'
+    return question.difficulty == 'medium'
 })
+
 //Hard
 const hardQuestions=questions.filter(function (question){
-    return question.difficulty = 'hard'
+    return question.difficulty == 'hard'
 })
+
+
+//Event Listeners 
+
+easyButton.addEventListener ('click', ()=> {
+    setEasyQuestion()
+})
+
+mediumButton.addEventListener ('click', ()=>{
+    setMediumQuestion()
+})
+
+hardButton.addEventListener ('click', ()=>{
+    setHardQuestion()
+})
+
 
 
 //Start of Game
 
-function setAvailableQuestions () {
+function setEasyQuestion () {
+    homePage.classList.add('hide');
+    gamePage.classList.remove('hide');
+    const allQuestions=easyQuestions.length;
+    for (let i=0; i<allQuestions; i++){
+        availableQuestions.push(easyQuestions[i]);
+        } 
+    newQuestion()
+}
 
-   
+function setMediumQuestion () {
+    homePage.classList.add('hide');
+    gamePage.classList.remove('hide');
     const allQuestions=mediumQuestions.length;
     for (let i=0; i<allQuestions; i++){
         availableQuestions.push(mediumQuestions[i]);
         } 
+    newQuestion()
+}
+
+function setHardQuestion () {
+    homePage.classList.add('hide');
+    gamePage.classList.remove('hide');
+    const allQuestions=hardQuestions.length;
+    for (let i=0; i<allQuestions; i++){
+        availableQuestions.push(hardQuestions[i]);
+        } 
+    newQuestion()
 }
 
 function newQuestion () {
@@ -469,6 +508,5 @@ function checkResult (element){
     }, 900)
 }
 
-setAvailableQuestions();
-newQuestion();
+
 
