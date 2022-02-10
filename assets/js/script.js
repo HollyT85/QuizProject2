@@ -386,7 +386,7 @@ const leaderboardBtn=document.getElementById('leaderboardBtn')
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=3;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -465,7 +465,7 @@ function newQuestion () {
     if (questionCounter == numberOfQuestions){
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
-        userScore.innerHTML=Math.round(score/3*100);
+        userScore.innerHTML=Math.round(score/15*100);
     }
 //randomized questions and entering into HTML
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
