@@ -369,6 +369,7 @@ const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
 const userScore=document.getElementById('score');
+const username=document.getElementById('username');
 
 //Different 'page' containers
 
@@ -385,7 +386,10 @@ const leaderboardBtn=document.getElementById('leaderboardBtn')
 const saveScoreButton=document.getElementById('saveScore');
 
 //local storage
-const recentScore=localStorage.getItem('highscore')
+const recentScore=localStorage.getItem('currentScore');
+const highScores=JSON.parse(localStorage.getItem('highScores')) || {};
+JSON.parse(localStorage.getItem('highScores'));
+
 
 //Quiz features
 
@@ -476,7 +480,7 @@ function newQuestion () {
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
         userScore.innerHTML=Math.round(score/15*100);
-        localStorage.setItem('highscore', score)
+        localStorage.setItem('currentScore', score)
     }
 //randomized questions and entering into HTML
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
@@ -525,8 +529,12 @@ function checkResult (element){
 }
 
 function saveHighScore () {
+
+    const submitScore = {
+        score: recentScore,
+        name: username.value
+    }
     
-    console.log('saved')
 }
 
 
