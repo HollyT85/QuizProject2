@@ -375,11 +375,13 @@ const userScore=document.getElementById('score');
 const homePage=document.getElementById('homePage');
 const gamePage=document.getElementById('gamePage');
 const endPage=document.getElementById('endPage');
+const leaderboardPage=document.getElementById('leaderboard');
 
 //Buttons
 const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
+const leaderboardBtn=document.getElementById('leaderboardBtn')
 
 //Quiz features
 
@@ -419,6 +421,11 @@ mediumButton.addEventListener ('click', ()=>{
 
 hardButton.addEventListener ('click', ()=>{
     setHardQuestion()
+})
+
+leaderboardBtn.addEventListener('click', ()=>{
+    homePage.classList.add('hide');
+    leaderboardPage.classList.remove('hide');
 })
 
 //Start of Game
