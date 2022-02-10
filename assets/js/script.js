@@ -32,7 +32,7 @@ const questions= [
         difficulty: "hard"
     },
     {
-        Question: "Nefertum is the Egyptian goddes of what?",
+        Question: "Nefertum is the Egyptian goddess of what?",
         Options: ['Soap', 'Eyelashes', 'Hair', 'Perfume'],
         correctAnswer: 3,
         difficulty: "hard"
@@ -62,20 +62,20 @@ const questions= [
         difficulty: "hard"
     },
     {
-        Question: "What was Endymion's punishment for achievement immortality?",
+        Question: "What was Endymion's punishment for achieving immortality?",
         Options:['Eternal sleep','Eternal hunger','Eternal restlessness','Eternal happiness'],      
         correctAnswer: 0,
         difficulty: "hard"
     },
     {
-        Question: "who is believed to have split heaven and earth in Sumerian mythology?",
+        Question: "Who is believed to have split heaven and earth in Sumerian mythology?",
         Options:['Ninmah','Gilgamesh','Enki','Enlil'],      
         correctAnswer: 3,
         difficulty: "hard"
     },
     {
-        Question: "Who was the founder of Incan civilization?",
-        Options:['Pizarro','Machu Pichu','Manco Capac','Cusco'],      
+        Question: "Who fell in love with a statue he had carved?",
+        Options:['Zeus','Orion','Pygamilion','Achilles'],      
         correctAnswer: 2,
         difficulty: "hard"
     },
