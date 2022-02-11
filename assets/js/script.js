@@ -388,7 +388,7 @@ const leaderboardBtn=document.getElementById('leaderboardBtn')
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=2;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -520,6 +520,8 @@ function checkResult (element){
 
 //To create leaderboard
 
+// To create this leaderboard I watched a video by learn {to} code on YouTube (https://www.youtube.com/watch?v=icb9AUBeznQ) 1hr 30 - 1hr 40
+
 const username=document.getElementById('username');
 
 const highScores=JSON.parse(localStorage.getItem('highScore')) || []
@@ -541,7 +543,7 @@ console.log(highScores)
 
     localStorage.setItem('highScore', JSON.stringify(highScores))
 
-    
+    window.location.assign('/')
 } 
 
 const highScoreList=document.getElementById('highScoresList')
