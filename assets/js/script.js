@@ -528,7 +528,7 @@ function saveHighScore (e) {
     e.preventDefault
     const saveData = {
         username: username.value,
-        score: localStorage.setItem('currentScore')
+        score: localStorage.getItem('currentScore')
     }
 
     highScores.push(saveData);
