@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--Stylesheets-->
+    <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Mythology Quiz</title>
 </head>
 <body>
 <!--Home Page-->
     <div class="home-page container flex-column flex-center text-center" id="homePage">
-        <h1 class="title">Mythology <br> Quiz</h1>
+        <h1 class="title">Mythology Quiz<i class="fa-solid fa-bolt-lightning"></i></h1>
         <h2 class="tag-line">Do you know your Zeus from your Odin? <br>Your Centaur from your Minotaur?<br> Find out here!</h2>
         <button type="button" class="btn-hover" id="easy">Play Level 1</button>
         <button type="button" class="btn-hover" id="medium">Play Level 2</button>
@@ -35,15 +38,13 @@
     </div>
 
 <!--End Page-->
-    <div class="end-page container flex-column flex-center hide" id="endPage">
-        <h2 class="sub-title">Results</h2>
-        <p class="title">Congratulations!<br></p>
+    <div class="end-page container flex-column flex-center text-center hide" id="endPage">
+        <h2 class="title">Congratulations!<br></p>
             <p class="sub-title">You've finished the quiz.</p>
-            <p class="sub-title">You scored:<br></p>
+            <p class="sub-title">You scored:<br></p><p class="sub-title"id="wholeScore"></p>
             <div class="holder">
-                <p class="sub-title"id="wholeScore"></p>
                 <p class="sub-title" id="score"></p>
-                <p class="sub-title">%</p>
+                <p class="sub-title text-center">%</p>
             </div>
             <div class="submit-score" id="submitScore">
                 <form>
@@ -51,19 +52,16 @@
                     <button type="submit" class="btn-hover" id="saveScore" onclick="saveHighScore(event)">Save</button>
                 </form>
 
-                
-            </div>
-        
-        <a href="index.html" class="btn-hover">Home</a>
-        
+                <button type="button" class="btn-hover" id="homeButtonEnd">Home</button>
+            </div>        
     </div>
 
 <!--Leaderboard-->
-    <div class="leaderboard-page container flex-column flex-center hide" id="leaderboard">
+    <div class="leaderboard-page container flex-column flex-center text-center hide" id="leaderboard">
         <div id="highScores">
             <h2 id="finalScore" class="sub-title">Leaderboard</h2>
             <ul id="highScoresList" class="sub-title"></ul>
-            <a href="index.html" class="btn">Home</a>
+            <button type="button" class="btn-hover" id="homeButton">Home</button>
         </div>
         
     </div>
