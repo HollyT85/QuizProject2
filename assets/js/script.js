@@ -369,6 +369,7 @@ const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
 const userScore=document.getElementById('score');
+const wholeScore=document.getElementById('wholeScore')
 
 //Different 'page' containers
 
@@ -384,22 +385,10 @@ const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
 
 
-//local storage
-const username=document.getElementById('username');
-const saveScore=document.getElementById('saveScore');
-
-const highScores=JSON.parse(localStorage.getItem('highScores')) || [];
-
-//Leaderboard
-
-const highScoresList=document.getElementById('highScoresList');
-
-highScoresList.innerText=localStorage.getItem('highscores')
-
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=15;
+let numberOfQuestions=2;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -476,11 +465,11 @@ function setHardQuestion () {
 function newQuestion () {
 //send user to end page when number of questions are reached
     if (questionCounter == numberOfQuestions){
-//local storage to access score on end page and also for a leaderboard
-        
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
+        wholeScore.innerHTML=score;
         userScore.innerHTML=Math.round(score/15*100);
+//local storage
         localStorage.setItem('currentScore', score)
     }
 //randomized questions and entering into HTML
@@ -529,22 +518,35 @@ function checkResult (element){
     }, 900)
 }
 
+//To create loeaderboard
+
+const username=document.getElementById('username');
+
+const highScores=JSON.parse(localStorage.getItem('highScore')) || []
+
 function saveHighScore (e) {
-    e.preventDefault();
-    const submitScore = {
-        name: username.value,
-        score: localStorage.getItem('currentScore')
-        
+    e.preventDefault
+    const saveData = {
+        username: username.value,
+        score: localStorage.setItem('currentScore')
     }
 
-    highScores.push(submitScore);
-    highScores.sort((a, b) => {
+    highScores.push(saveData);
+
+    highScores.sort ((a, b)=> {
         return b.score-a.score
-    })
+    });
+
     highScores.splice(5);
-    localStorage.setItem('highscores',JSON.stringify(highScores));
-    console.log(localStorage.getItem('highscores'))
-    
-}
 
+    localStorage.setItem('highScore', JSON.stringify(highScores))
 
+    window.location.assign('/')
+} 
+
+const highScoreList=document.getElementById('highScoresList')
+
+highScoreList.innerHTML= 
+highScores.map (saveData => {
+    return `<li class="sub-title">${saveData.username} - ${score.score}</li>`
+}).join('')
