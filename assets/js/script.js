@@ -550,5 +550,5 @@ const highScoreList=document.getElementById('highScoresList')
 
 highScoreList.innerHTML= 
 highScores.map (saveData => {
-    return `<li class="sub-title">${saveData.username} - ${saveData.score}</li>`
+    return `<li class="sub-title lists">${saveData.username} - ${saveData.score}</li>`
 }).join('')
