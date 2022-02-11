@@ -383,6 +383,8 @@ const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
+const homeButton=document.getElementById('homeButton')
+const homeButtonEnd=document.getElementById('homeButtonEnd')
 
 
 //Quiz features
@@ -428,6 +430,16 @@ hardButton.addEventListener ('click', ()=>{
 leaderboardBtn.addEventListener('click', ()=>{
     homePage.classList.add('hide');
     leaderboardPage.classList.remove('hide');
+})
+
+homeButton.addEventListener ('click', ()=>{
+    leaderboardPage.classList.add('hide');
+    homePage.classList.remove('hide');
+})
+
+homeButtonEnd.addEventListener ('click', ()=>{
+    endPage.classList.add('hide');
+    homePage.classList.remove('hide');
 })
 
 //Start of Game
@@ -550,5 +562,5 @@ const highScoreList=document.getElementById('highScoresList')
 
 highScoreList.innerHTML= 
 highScores.map (saveData => {
-    return `<li class="sub-title lists">${saveData.username} - ${saveData.score}</li>`
+    return `<li class="sub-title lists text-center">${saveData.username} - ${saveData.score}</li>`
 }).join('')
