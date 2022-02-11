@@ -518,7 +518,7 @@ function checkResult (element){
     }, 900)
 }
 
-//To create loeaderboard
+//To create leaderboard
 
 const username=document.getElementById('username');
 
@@ -532,7 +532,7 @@ function saveHighScore (e) {
     }
 
     highScores.push(saveData);
-
+console.log(highScores)
     highScores.sort ((a, b)=> {
         return b.score-a.score
     });
@@ -541,12 +541,12 @@ function saveHighScore (e) {
 
     localStorage.setItem('highScore', JSON.stringify(highScores))
 
-    window.location.assign('/')
+    
 } 
 
 const highScoreList=document.getElementById('highScoresList')
 
 highScoreList.innerHTML= 
 highScores.map (saveData => {
-    return `<li class="sub-title">${saveData.username} - ${score.score}</li>`
+    return `<li class="sub-title">${saveData.username} - ${saveData.score}</li>`
 }).join('')
