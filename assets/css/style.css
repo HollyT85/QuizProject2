@@ -34,19 +34,14 @@ body {
     max-width: 80rem;
     margin: 2rem auto;
     padding:2rem;
-    background-color: rgba(188, 123, 59, 0.7);
+    background-color: rgba(0, 0, 54, 0.8);
     border-radius: 20px;
-    border: #18191a 20px double;
+    border: #0d98ba 20px double;
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
 }
 
 .text-center {
@@ -61,27 +56,28 @@ body {
 
 .title {
     font-size: 5.4rem;
-    color: #18191a;
+    color: #fa8128;
     margin-bottom: 2rem;
     font-family: 'Caesar Dressing', cursive;
-
+    text-shadow: 2px 3px #fed8b1;
 }
 
 .tag-line {
     font-family: 'Caesar Dressing', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-bottom: 2rem;
+    color: #fa8128;
 }
 
 .btn, .btn-hover {
-    font-size: 2.4rem;
+    font-size: 2rem;
     padding: 2rem 0;
     width: 30rem;
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #c0c0c0;
-    background-color: #18191a;
+    color: #261342;
+    background-color: #0d98ba;
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Caesar Dressing', cursive;
@@ -89,29 +85,36 @@ body {
 
 .question-number, .question, .score, .sub-title, .score, .correct-answers {
     font-size: 3rem;
-    color: black;
+    color: #fa8128;
     margin-bottom: 5rem;
     font-family: 'Caesar Dressing', cursive;
+}
+
+i {
+    font-size: 5rem;
+    padding: 2rem;
+    text-shadow: 2px 3px #fed8b1;
 }
 
 /*responsiveness for users based on their actions*/
 
 .correct {
-    background-color: #00A36C;
+    background-color: #228c22;
     color:#660000
 }
 
 .incorrect {
     background-color: #660000;
-    color:#00A36C
+    color:#228c22
 }
 
 .btn-hover:hover {
     background-color: #261342;
+    color: black;
 }
 
 .btn:hover{
-    box-shadow: 2px 2px 2px 2px #c0c0c0 inset;
+    box-shadow: 2px 2px 2px 2px #fa8128 inset;
 }
 
 /*mobile background*/
