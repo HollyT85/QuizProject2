@@ -385,6 +385,7 @@ const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
 const homeButton=document.getElementById('homeButton')
 const homeButtonEnd=document.getElementById('homeButtonEnd')
+const btnHome=document.getElementById('btnHome')
 
 
 //Quiz features
@@ -434,6 +435,11 @@ leaderboardBtn.addEventListener('click', ()=>{
 
 homeButton.addEventListener ('click', ()=>{
     leaderboardPage.classList.add('hide');
+    homePage.classList.remove('hide');
+})
+
+btnHome.addEventListener('click', ()=>{
+    gamePage.classList.add('hide');
     homePage.classList.remove('hide');
 })
 
