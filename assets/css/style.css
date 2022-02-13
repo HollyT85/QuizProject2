@@ -90,7 +90,7 @@ body {
     font-family: 'Caesar Dressing', cursive;
 }
 
-i {
+.bi-lightning-fill {
     font-size: 5rem;
     padding: 2rem;
     text-shadow: 2px 3px #fed8b1;
@@ -98,7 +98,7 @@ i {
 
 .bi-bank{
     font-size: 3rem;
-    padding: 2rem;
+    color:#2e145d;
 }
 
 /*responsiveness for users based on their actions*/
@@ -114,6 +114,12 @@ i {
 }
 
 .btn-hover:hover {
+    background-color: #261342;
+    color: #fa8128;
+}
+
+.bi-bank:hover {
+    font-size: 3rem;
     background-color: #261342;
     color: #fa8128;
 }
