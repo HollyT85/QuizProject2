@@ -110,11 +110,11 @@ i {
 
 .btn-hover:hover {
     background-color: #261342;
-    color: black;
+    color: #fa8128;
 }
 
 .btn:hover{
-    box-shadow: 2px 2px 2px 2px #fa8128 inset;
+    box-shadow: 2px 2px 2px 2px #152238 inset;
 }
 
 /*mobile background*/
