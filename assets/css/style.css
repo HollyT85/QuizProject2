@@ -101,6 +101,31 @@ body {
     color:#2e145d;
 }
 
+.btn-home {
+    margin-left: auto;
+    font-size: 2rem;
+    background-color: #0d98ba;
+    color: #261342;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.btn-home:hover {
+    background-color: #261342;
+    color: #fa8128;
+}
+
+.leaderboard-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 80rem;
+        margin: 2rem auto;
+        padding:2rem;
+        background-color: rgba(0, 0, 54, 0.8);
+        border-radius: 20px;
+        border: #0d98ba 20px double;
+    }
+
 /*responsiveness for users based on their actions*/
 
 .correct {
@@ -142,6 +167,13 @@ body {
         background-size: cover;
     }
 }
+
+@media(max-width: 800px) {
+    .bi-lightning-fill {
+        display: none;
+    }
+}
+
 
 
 /*l*/
