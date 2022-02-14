@@ -149,9 +149,7 @@ body {
 
 @media(max-width: 800px) {
     body {
-        padding: 2rem;
-        background-image: linear-gradient(to right, #985d20,#d8a874)
-        
+        padding: 1rem;
     }
 }
 
