@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding:0;
-    background-color: #2e145d;
+    background-color: #d8a874;
     background-image: url("https://i.postimg.cc/T3SGc5RN/armillar-ball-3408811.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,6 +165,7 @@ body {
     body {
         background-image: url("https://i.postimg.cc/3Jt3dbzT/mobbackground.jpg");
         background-size: cover;
+        padding: 2rem;
     }
 }
 
