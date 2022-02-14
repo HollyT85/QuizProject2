@@ -445,7 +445,7 @@ btnHome.addEventListener('click', ()=>{
 
 homeButtonEnd.addEventListener ('click', ()=>{
     endPage.classList.add('hide');
-    homePage.classList.remove('hide');
+    window.location.assign('/')
 })
 
 //Start of Game
