@@ -435,17 +435,17 @@ leaderboardBtn.addEventListener('click', ()=>{
 
 homeButton.addEventListener ('click', ()=>{
     leaderboardPage.classList.add('hide');
-    window.location.href="/index.html"
+    window.location.assign("https://hollyt85.github.io/QuizProject2/");
 })
 
 btnHome.addEventListener('click', ()=>{
     gamePage.classList.add('hide');
-    window.location.href="/index.html"
+    window.location.assign("https://hollyt85.github.io/QuizProject2/");
 })
 
 homeButtonEnd.addEventListener ('click', ()=>{
     endPage.classList.add('hide');
-    window.location.href="/index.html"
+    window.location.assign("https://hollyt85.github.io/QuizProject2/");
 })
 
 //Start of Game
@@ -561,7 +561,7 @@ console.log(highScores)
 
     localStorage.setItem('highScore', JSON.stringify(highScores))
 
-    window.location.assign('/')
+    window.location.assign("https://hollyt85.github.io/QuizProject2/");
 } 
 
 const highScoreList=document.getElementById('highScoresList')
