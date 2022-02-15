@@ -60,7 +60,7 @@ body {
     text-shadow: 2px 3px #fed8b1;
 }
 
-.tag-line {
+.tag-line, .home-tag-line {
     font-family: 'Caesar Dressing', cursive;
     font-size: 2.5rem;
     padding-bottom: 2rem;
@@ -151,14 +151,14 @@ body {
     box-shadow: 2px 2px 2px 2px #152238 inset;
 }
 
-/*mobile background*/
-
+/*mobile*/
 
 @media(max-width: 800px) {
-    body {
-        padding: 1rem;
+    .home-tag-line {
+        display: none;
     }
 }
+
 
 
 @media(max-width: 800px) {
@@ -166,6 +166,7 @@ body {
         display: none;
     }
 }
+
 
 /*Form & List*/
 
