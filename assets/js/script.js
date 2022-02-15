@@ -435,17 +435,17 @@ leaderboardBtn.addEventListener('click', ()=>{
 
 homeButton.addEventListener ('click', ()=>{
     leaderboardPage.classList.add('hide');
-    window.location.assign('/')
+    window.location.href="/index.html"
 })
 
 btnHome.addEventListener('click', ()=>{
     gamePage.classList.add('hide');
-    window.location.assign('/')
+    window.location.href="/index.html"
 })
 
 homeButtonEnd.addEventListener ('click', ()=>{
     endPage.classList.add('hide');
-    window.location.assign('/')
+    window.location.href="/index.html"
 })
 
 //Start of Game
