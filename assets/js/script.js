@@ -435,12 +435,12 @@ leaderboardBtn.addEventListener('click', ()=>{
 
 homeButton.addEventListener ('click', ()=>{
     leaderboardPage.classList.add('hide');
-    homePage.classList.remove('hide');
+    window.location.assign('/')
 })
 
 btnHome.addEventListener('click', ()=>{
     gamePage.classList.add('hide');
-    homePage.classList.remove('hide');
+    window.location.assign('/')
 })
 
 homeButtonEnd.addEventListener ('click', ()=>{
