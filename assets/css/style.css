@@ -1,6 +1,14 @@
 /*Whole page styling*/
 body {
-    background-image: url("https://i.postimg.cc/T3SGc5RN/armillar-ball-3408811.jpg"); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border: 0;
+    background-image: url("https://i.postimg.cc/T3SGc5RN/armillar-ball-3408811.jpg");
+    background-size: cover;
 }
 
 * {
@@ -10,12 +18,7 @@ body {
     font-family: 'Caesar Dressing', cursive;
 }
 
-.background-image {
-    background-image: url("https://i.postimg.cc/T3SGc5RN/armillar-ball-3408811.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 2rem 5rem;
-}
+
 
 .holder {
     display:flex;
@@ -31,6 +34,7 @@ body {
     background-color: rgba(0, 0, 54, 0.8);
     border-radius: 20px;
     border: #0d98ba 20px double;
+    align-self: center;
 }
 
 .flex-column {
