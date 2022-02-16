@@ -52,7 +52,7 @@ The quiz has been tested by around 15 people on various devices and all have fou
 
 <b><u>Wireframes</u></b>
 
-I created my Wireframes on the online site Lucidchart.
+I created my Wireframes on the online site [Lucidchart](https://www.lucidchart.com).
 
 I wanted my design to be the same across all devices (just adjusting for screen size) and, as such, there is only one set.
 
@@ -152,6 +152,8 @@ The site was created using HTML, CSS and JavaScript.
 [JSHint](https://jshint.com/) to check JavaScript code.
 
 [a11y](https://color.a11y.com/Contrast/) to check accessibility of colours.
+
+[Lucidchart](https://www.lucidchart.com) for creating my wireframe.
 
 [TheWebShala](https://www.youtube.com/watch?v=QU6z69P5BrU&t=820s) for help with fixing my splicing problem.
 
