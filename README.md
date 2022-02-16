@@ -93,3 +93,7 @@ I found many bugs whilst testing as did my test group; these ranged from the hom
 
 
 background image: Image by <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Darkmoon_Art</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Pixabay</a>
+
+I watched sections of this video by The Web Shala - https://www.youtube.com/watch?v=QU6z69P5BrU&t=820s
+
+To create this leaderboard I watched a video by learn {to} code on YouTube (https://www.youtube.com/watch?v=icb9AUBeznQ) 1hr 30 - 1hr 40

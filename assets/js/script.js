@@ -393,6 +393,7 @@ const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn');
+const homeButtonEnd=document.getElementById('homeButtonEnd');
 
 //Quiz features
 
@@ -485,9 +486,7 @@ function newQuestion () {
 //local storage
         localStorage.setItem('currentScore', score);
     }
-//randomized questions and entering into HTML
-
-//I watched sections of this video by The Web Shala - https://www.youtube.com/watch?v=QU6z69P5BrU&t=820s 
+//randomized questions and entering into HTML 
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
     question.innerHTML=currentQuestion.Question;
@@ -537,7 +536,6 @@ function checkResult (element){
 
 //To create leaderboard
 
-// To create this leaderboard I watched a video by learn {to} code on YouTube (https://www.youtube.com/watch?v=icb9AUBeznQ) 1hr 30 - 1hr 40
 
 const username=document.getElementById('username');
 
