@@ -160,6 +160,13 @@ body {
 }
 
 
+@media(max-width: 800px) {
+    body {
+        padding: 1rem;
+    }
+}
+
+
 
 @media(max-width: 800px) {
     .bi-lightning-fill {
