@@ -77,7 +77,19 @@ As a user, I want to be able to compare my score with other players.<br>
 
 <b><u>Testing & Validation</u></b>
 
-I found many bugs whilst testing as did my test group; these ranged from the home button not refreshing the game to styling issues where writing went outside their containers etc. These have now been fixed and the site has been validated. The CSS and HTML has been validated with
+I found many bugs whilst testing as did my test group; these ranged from the home button not refreshing the game to styling issues where writing went outside their containers etc. These have now been fixed and the site has been validated. The CSS and HTML has been validated with [W3CValidator](https://validator.w3.org/) and the JS has been through [JSHint](https://jshint.com/). The HTML & CSS found no problems; the JS had warnings regarding const/let being available from ES6.
+
+<u>HTML Validation</u>
+
+![html](assets/images/HTMLvalidator.png)
+
+<u>CSS Validation</u>
+
+![css](assets/images/CSSvalidator.png)
+
+<u>JS Validation</u>
+
+![js](assets/images/jshint.png)
 
 
 background image: Image by <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Darkmoon_Art</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Pixabay</a>

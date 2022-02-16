@@ -1,3 +1,14 @@
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
+
 //Questions
 
 const questions= [
@@ -361,15 +372,14 @@ const questions= [
         correctAnswer:0,
         difficulty: "medium"
     }
-    ]
+    ];
 
 //Extracting IDs from HTML
 
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
-const userScore=document.getElementById('score');
-const wholeScore=document.getElementById('wholeScore')
+const wholeScore=document.getElementById('wholeScore');
 
 //Different 'page' containers
 
@@ -382,7 +392,7 @@ const leaderboardPage=document.getElementById('leaderboard');
 const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
-const leaderboardBtn=document.getElementById('leaderboardBtn')
+const leaderboardBtn=document.getElementById('leaderboardBtn');
 
 //Quiz features
 
@@ -396,41 +406,41 @@ let score=0;
 //Filter Questions via difficulty
 //Easy
 const easyQuestions=questions.filter(function(question){
-    return question.difficulty == 'easy'
-})
+    return question.difficulty == 'easy';
+});
 
 //Medium
 const mediumQuestions=questions.filter(function(question){
-    return question.difficulty == 'medium'
-})
+    return question.difficulty == 'medium';
+});
 
 //Hard
 const hardQuestions=questions.filter(function (question){
-    return question.difficulty == 'hard'
-})
+    return question.difficulty == 'hard';
+});
 
 //Event Listeners 
 
 easyButton.addEventListener ('click', ()=> {
-    setEasyQuestion()
-})
+    setEasyQuestion();
+});
 
 mediumButton.addEventListener ('click', ()=>{
-    setMediumQuestion()
-})
+    setMediumQuestion();
+});
 
 hardButton.addEventListener ('click', ()=>{
-    setHardQuestion()
-})
+    setHardQuestion();
+});
 
 leaderboardBtn.addEventListener('click', ()=>{
     homePage.classList.add('hide');
     leaderboardPage.classList.remove('hide');
-})
+});
 
 homeButtonEnd.addEventListener ('click', ()=>{
     window.location.assign("https://hollyt85.github.io/QuizProject2/");
-})
+});
 
 //Start of Game - set Questions based on difficulty chosen and hide/show correct page
 
@@ -441,7 +451,7 @@ function setEasyQuestion () {
     for (let i=0; i<allQuestions; i++){
         availableQuestions.push(easyQuestions[i]);
         } 
-    newQuestion()
+    newQuestion();
 }
 
 function setMediumQuestion () {
@@ -451,7 +461,7 @@ function setMediumQuestion () {
     for (let i=0; i<allQuestions; i++){
         availableQuestions.push(mediumQuestions[i]);
         } 
-    newQuestion()
+    newQuestion();
 }
 
 function setHardQuestion () {
@@ -461,7 +471,7 @@ function setHardQuestion () {
     for (let i=0; i<allQuestions; i++){
         availableQuestions.push(hardQuestions[i]);
         } 
-    newQuestion()
+    newQuestion();
 }
 
 //Set new question 
@@ -473,7 +483,7 @@ function newQuestion () {
         endPage.classList.remove('hide');
         wholeScore.innerHTML=score;
 //local storage
-        localStorage.setItem('currentScore', score)
+        localStorage.setItem('currentScore', score);
     }
 //randomized questions and entering into HTML
 
@@ -481,7 +491,7 @@ function newQuestion () {
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
     question.innerHTML=currentQuestion.Question;
-    const index=availableQuestions.indexOf(questionIndex)
+    const index=availableQuestions.indexOf(questionIndex);
     availableQuestions.splice(index, 1);
 
 //randomized answers and entering into HTML
@@ -513,16 +523,16 @@ function newQuestion () {
 function checkResult (element){
     const userAnswer=element.id;
     if (userAnswer==currentQuestion.correctAnswer){
-        element.classList.add('correct')
+        element.classList.add('correct');
         score++;
     } 
     else {
-        element.classList.add('incorrect')
+        element.classList.add('incorrect');
     }
 //move on to new question after a set time so user doesn't need to click next
     setTimeout(function() {
-        newQuestion()
-    }, 900)
+        newQuestion();
+    }, 900);
 }
 
 //To create leaderboard
@@ -531,10 +541,10 @@ function checkResult (element){
 
 const username=document.getElementById('username');
 
-const highScores=JSON.parse(localStorage.getItem('highScore')) || []
+const highScores=JSON.parse(localStorage.getItem('highScore')) || [];
 
 function saveHighScore (e) {
-    e.preventDefault
+    e.preventDefault;
     const saveData = {
         username: username.value,
         score: localStorage.getItem('currentScore')
@@ -542,19 +552,19 @@ function saveHighScore (e) {
     highScores.push(saveData);
 //Sort leaderboard by highest-lowest
     highScores.sort ((a, b)=> {
-        return b.score-a.score
+        return b.score-a.score;
     });
 //Only allow 5 scores
     highScores.splice(5);
 
-    localStorage.setItem('highScore', JSON.stringify(highScores))
+    localStorage.setItem('highScore', JSON.stringify(highScores));
 //Return to home page - resets the home page etc
     window.location.assign("https://hollyt85.github.io/QuizProject2/");
 } 
 
-const highScoreList=document.getElementById('highScoresList')
+const highScoreList=document.getElementById('highScoresList');
 
 highScoreList.innerHTML= 
 highScores.map (saveData => {
     return `<li class="sub-title lists text-center">${saveData.username} - ${saveData.score}</li>`
-}).join('')
+}).join('');
