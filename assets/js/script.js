@@ -383,9 +383,7 @@ const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
-const homeButton=document.getElementById('homeButton')
-const homeButtonEnd=document.getElementById('homeButtonEnd')
-const btnHome=document.getElementById('btnHome')
+
 
 
 //Quiz features
@@ -433,18 +431,8 @@ leaderboardBtn.addEventListener('click', ()=>{
     leaderboardPage.classList.remove('hide');
 })
 
-homeButton.addEventListener ('click', ()=>{
-    leaderboardPage.classList.add('hide');
-    window.location.assign("https://hollyt85.github.io/QuizProject2/");
-})
-
-btnHome.addEventListener('click', ()=>{
-    gamePage.classList.add('hide');
-    window.location.assign("https://hollyt85.github.io/QuizProject2/");
-})
 
 homeButtonEnd.addEventListener ('click', ()=>{
-    endPage.classList.add('hide');
     window.location.assign("https://hollyt85.github.io/QuizProject2/");
 })
 
