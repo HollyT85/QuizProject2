@@ -7,7 +7,7 @@ I created a mythology quiz as I wanted to create an interactive game that people
 
 ![responsiveness](assets/images/responsiveness.png)
 
-I created the site using flex (researched via W3C) to make it responsive on all screen sizes which; as you can see above, it is. I wanted the quiz area to be centralised vertically on any screen size to ensure a full covering of the background image.
+I created the site using flex (researched via [W3](https://www.w3.org/)) to make it responsive on all screen sizes which; as you can see above, it is. I wanted the quiz area to be centralised vertically on any screen size to ensure a full covering of the background image.
 
 The colours have been chosen to match the background image colour; brown/orange and blue are complimentary colours on the colour wheel so I stuck to this theme as much as possible; the only deviations are the red/green for correct/incorrect answers.
 
@@ -53,5 +53,31 @@ I wanted my design to be the same across all devices (just adjusting for screen 
 
 <u>End Page</u><br>
 ![end](assets/images/endpage.png)
+
+<b><u>User Stories</u></b>
+
+As a user, I want a quiz that is clear about it's content.<br>
+![userstory1](assets/images/userstory1.png)<br>
+
+As a user, I want a quiz that is easily navigable on every page.<br>
+![userstoy2](assets/images/userstorynav.png)<br>
+![userstory2](assets/images/userstorynav1.png)<br>
+![user.story2](assets/images/userstorynav2.png)<br>
+
+As a user, I want to know if I got a question right or wrong at the time of submitting an answer.
+As a user, I want to have my knowledge challenged and be encouraged to learn new things.<br>
+![userstory3](assets/images/userstoryright.png)<br>
+![userstry4](assets/images/userstorywrong.png)<br>
+
+As a user, I want to know my final score in a clear, concise manner.<br>
+![userstory5](assets/images/userstoryscore.png)<br>
+
+As a user, I want to be able to compare my score with other players.<br>
+![userstory6](assets/images/userstoryleaderboard.png)<br>
+
+<b><u>Testing & Validation</u></b>
+
+I found many bugs whilst testing as did my test group; these ranged from the home button not refreshing the game to styling issues where writing went outside their containers etc. These have now been fixed and the site has been validated. The CSS and HTML has been validated with
+
 
 background image: Image by <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Darkmoon_Art</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Pixabay</a>
