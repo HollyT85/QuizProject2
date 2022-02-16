@@ -46,15 +46,16 @@
     <div class="end-page container flex-column text-center hide" id="endPage">
         <h2 class="title"><i class="bi bi-lightning-fill"></i>Congratulations!<i class="bi bi-lightning-fill"></i><br></h2>
             <p class="tag-line">You've finished the quiz.</p>
-            <p class="tag-line">You scored:<br></p
+            <p class="tag-line">You scored:<br></p>
+<!--Updates score-->          
             ><p class="tag-line"id="wholeScore"></p>
-            
+<!--Submits score to leaderboard-->
             <div class="submit-score" id="submitScore">
                 <form>
                     <input type="text" class="btn-hover" name="username" id="username" placeholder="Enter username" required>
                     <button type="submit" class="btn-hover" id="saveScore" onclick="saveHighScore(event)">Save</button>
                 </form>
-
+<!--Home button-->
                 <button type="button" class="btn-hover" id="homeButtonEnd">Home</button>
             </div>        
     </div>
@@ -62,9 +63,11 @@
 <!--Leaderboard-->
     <div class="leaderboard-page container flex-column text-center hide" id="leaderboard">
         <h2 id="finalScore" class="sub-title">Leaderboard</h2>
+<!--Leaderboard display-->
         <div id="highScores" class="leaderboard-display">
             <ul id="highScoresList" class="sub-title"></ul>
         </div>
+<!--Home button-->
         <a class="btn-hover" href="https://hollyt85.github.io/QuizProject2/"><i class="bi bi-bank"></i></a>
     </div>
 
