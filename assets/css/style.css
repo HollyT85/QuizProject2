@@ -1,4 +1,13 @@
-/*Whole page styling*/
+/*Page styling*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size:62.5%;
+    font-family: 'Caesar Dressing', cursive;
+}
+
+/*Make body display centrally on the screen so background is always covered in background img*/
 body {
     display: flex;
     justify-content: center;
@@ -11,18 +20,7 @@ body {
     background-size: cover;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-size:62.5%;
-    font-family: 'Caesar Dressing', cursive;
-}
-
-
-
-.holder {
-    display:flex;
-}
+/*Flex container to adjust screen based on size*/
 
 .container {
     display: flex;
@@ -42,15 +40,24 @@ body {
     flex-direction: column;
 }
 
+/*align text*/
 .text-center {
     text-align: center;
 }
 
-/*Styling features */
 
+/*Question Number holder for clear display*/
+
+.holder {
+    display:flex;
+}
+
+/* Hide different pages depending on where the user is*/
 .hide {
     display:none;
 }
+
+/*Styling features */
 
 .title {
     font-size: 5rem;
@@ -111,6 +118,7 @@ body {
     background-color: #261342;
     color: #fa8128;
 }
+/*Display of leaderboard*/
 
 .leaderboard-display {
         display: flex;
@@ -121,7 +129,7 @@ body {
         padding:2rem;
         background-color: rgba(0, 0, 54, 0.8);
         border-radius: 20px;
-        border: #0d98ba 20px double;
+        border: #0d98ba 10px double;
     }
 
 /*responsiveness for users based on their actions*/

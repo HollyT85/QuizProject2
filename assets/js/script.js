@@ -431,7 +431,6 @@ leaderboardBtn.addEventListener('click', ()=>{
     leaderboardPage.classList.remove('hide');
 })
 
-
 homeButtonEnd.addEventListener ('click', ()=>{
     window.location.assign("https://hollyt85.github.io/QuizProject2/");
 })
