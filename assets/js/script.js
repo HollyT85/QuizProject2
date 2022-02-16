@@ -363,7 +363,7 @@ const questions= [
     }
     ]
 
-/*Extracting IDs from HTML*/
+//Extracting IDs from HTML
 
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
@@ -383,8 +383,6 @@ const easyButton=document.getElementById('easy');
 const mediumButton=document.getElementById('medium');
 const hardButton=document.getElementById('hard');
 const leaderboardBtn=document.getElementById('leaderboardBtn')
-
-
 
 //Quiz features
 
@@ -411,7 +409,6 @@ const hardQuestions=questions.filter(function (question){
     return question.difficulty == 'hard'
 })
 
-
 //Event Listeners 
 
 easyButton.addEventListener ('click', ()=> {
@@ -435,7 +432,7 @@ homeButtonEnd.addEventListener ('click', ()=>{
     window.location.assign("https://hollyt85.github.io/QuizProject2/");
 })
 
-//Start of Game
+//Start of Game - set Questions based on difficulty chosen and hide/show correct page
 
 function setEasyQuestion () {
     homePage.classList.add('hide');
@@ -467,17 +464,20 @@ function setHardQuestion () {
     newQuestion()
 }
 
+//Set new question 
+
 function newQuestion () {
 //send user to end page when number of questions are reached
     if (questionCounter == numberOfQuestions){
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
         wholeScore.innerHTML=score;
-        userScore.innerHTML=Math.round(score/15*100);
 //local storage
         localStorage.setItem('currentScore', score)
     }
 //randomized questions and entering into HTML
+
+//I watched sections of this video by The Web Shala - https://www.youtube.com/watch?v=QU6z69P5BrU&t=820s 
     const questionIndex=availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestion=questionIndex;
     question.innerHTML=currentQuestion.Question;
@@ -489,20 +489,22 @@ function newQuestion () {
     for (let i=0; i<allOptions; i++){
         availableAnswers.push(i);
     }
-
+//Make sure answers box is clear for each new question
     answers.innerHTML='';
     for(let i=0; i<allOptions; i++){
-        const optionIndex=availableAnswers[Math.floor(Math.random()*availableAnswers.length)];
-        
+        const optionIndex=availableAnswers[Math.floor(Math.random()*availableAnswers.length)];  
         const index2=availableAnswers.indexOf(optionIndex);
         availableAnswers.splice(index2,1);
+//Create div to match the number of answers for each question to allow for different types of questions & number of answers
         const option=document.createElement('div');
         option.innerHTML=currentQuestion.Options[optionIndex]; 
         option.id=optionIndex;
         option.className='btn';
         answers.appendChild(option);
+//Check result
         option.setAttribute('onclick', 'checkResult(this)');
     }
+//Update question counter and also question number on each new question so user knows how much more they have to do
     questionCounter++;
     updateQuestionNumber.innerText = `${questionCounter} / ${numberOfQuestions}`;
 }
@@ -537,17 +539,16 @@ function saveHighScore (e) {
         username: username.value,
         score: localStorage.getItem('currentScore')
     }
-
     highScores.push(saveData);
-console.log(highScores)
+//Sort leaderboard by highest-lowest
     highScores.sort ((a, b)=> {
         return b.score-a.score
     });
-
+//Only allow 5 scores
     highScores.splice(5);
 
     localStorage.setItem('highScore', JSON.stringify(highScores))
-
+//Return to home page - resets the home page etc
     window.location.assign("https://hollyt85.github.io/QuizProject2/");
 } 
 

@@ -159,7 +159,7 @@ body {
     box-shadow: 2px 2px 2px 2px #152238 inset;
 }
 
-/*mobile*/
+/*Smaller screen displays*/
 
 @media(max-width: 800px) {
     .home-tag-line {
@@ -167,21 +167,17 @@ body {
     }
 }
 
-
 @media(max-width: 800px) {
     body {
         padding: 1rem;
     }
 }
 
-
-
 @media(max-width: 800px) {
     .bi-lightning-fill {
         display: none;
     }
 }
-
 
 /*Form & List*/
 
