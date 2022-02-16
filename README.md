@@ -37,5 +37,21 @@ The score page provides the user with their score and an option to submit their 
 ![leaderboard](assets/images/leaderbord.png)
 The leaderboard displays the name and score and also allows access back to the home page.
 
+The quiz has been tested by around 15 people on various devices and all have found it fully functioning on their different devices with no display issues.
+
+<b><u>Wireframes</u></b>
+
+I created my Wireframes on the online site Lucidchart.
+
+I wanted my design to be the same across all devices (just adjusting for screen size) and, as such, there is only one set.
+
+<u>Home</u><br>
+![home](assets/images/homepage.png)
+
+<u>Quiz</u><br>
+![quiz](assets/images/quizpage.png)
+
+<u>End Page</u><br>
+![end](assets/images/endpage.png)
 
 background image: Image by <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Darkmoon_Art</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3408811">Pixabay</a>
