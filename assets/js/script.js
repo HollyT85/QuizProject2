@@ -471,6 +471,7 @@ function newQuestion () {
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
         wholeScore.innerHTML=score;
+//Add a comment relating to the player's score
     if (score >=0 && score <=5) {
         scoreComment.innerHTML="Speak to Mimir to gain some knowledge!";
     }
@@ -556,8 +557,7 @@ function saveHighScore (e) {
     highScores.splice(5);
 
     localStorage.setItem('highScore', JSON.stringify(highScores));
-//Return to home page - resets the home page etc
-    window.location.assign("https://hollyt85.github.io/QuizProject2/");
+
 } 
 
 const highScoreList=document.getElementById('highScoresList');
