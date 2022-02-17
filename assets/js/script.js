@@ -1,16 +1,3 @@
-// Hello.
-//
-// This is JSHint, a tool that helps to detect errors and potential
-// problems in your JavaScript code.
-//
-// To start, simply enter some JavaScript anywhere on this page. Your
-// report will appear on the right side.
-//
-// Additionally, you can toggle specific options in the Configure
-// menu.
-
-//Questions
-
 const questions= [
     {
         Question: "What immense structure is referred to in Norse mythology as the Yggdrasil?",
@@ -398,7 +385,7 @@ const homeButtonEnd=document.getElementById('homeButtonEnd');
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=15;
+let numberOfQuestions=1;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -546,6 +533,9 @@ function saveHighScore (e) {
     const saveData = {
         username: username.value,
         score: localStorage.getItem('currentScore')
+    }
+    if (username="") {
+        alert ("Please enter a username");
     }
     highScores.push(saveData);
 //Sort leaderboard by highest-lowest
