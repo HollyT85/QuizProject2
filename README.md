@@ -2,7 +2,9 @@
 
 <u><b>Overview</b></u><br>
 
-I created a mythology quiz as I wanted to create an interactive game that people could enjoy; it is designed to allow people to both test their knowledge and to create some curiosity about some of the more 'obscure' myths. 
+I created a mythology quiz as I wanted to create an interactive game that people could enjoy; it is designed to allow people to both test their knowledge and to create some curiosity about some of the more 'obscure' myths that people may not know about. 
+
+I wanted the quiz to have three levels so it could be enjoyed / a curiosity tool for anyone who plays.
 
 <u><b>Site Overview and UX</b></u>
 
@@ -10,21 +12,23 @@ I created a mythology quiz as I wanted to create an interactive game that people
 
 I created the site using flex (researched via [W3](https://www.w3.org/)) to make it responsive on all screen sizes which; as you can see above, it is. I wanted the quiz area to be centralised vertically on any screen size to ensure a full covering of the background image.
 
-The colours have been chosen to match the background image colour; brown/orange and blue are complimentary colours on the colour wheel so I stuck to this theme as much as possible; the only deviations are the red/green for correct/incorrect answers.
+The colours have been chosen to match the background image colour; brown/orange and blue are complimentary colours on the colour wheel so I stuck to this theme as much as possible; the only deviations are the red/green for correct/incorrect answers which are widely recognised as showing right/wrong.
 
 Each new question updates the question number so users can see where they are in the quiz and there is a home page button should a user decide to leave to try a different level if they find it too easy/hard.
 
-Before I started designing my quiz, I did some market research on how people prefer their quizzes to be; initially the majority said they would prefer to only know their score at the end however, when I did this and sent this out to my test group, they had changed their mind and said they would prefer to know if they got a question right/wrong as they went along. They said they did not want to know which was the right answer as, if they were interested, they would go away and research themselves and thus use it as a tool to learn things independently. It was widely felt that by being told the answer, there was no learning involved that would stay in their head and, as such, I changed my design to suit these opinions.
+Before I started designing my quiz, I created a research group to find out how people prefer their quizzes to be; initially the majority said they would prefer to only know their score at the end however, when I did this and sent this out to my test group, they had changed their mind and said they would prefer to know if they got a question right/wrong as they went along. They said they did not want to know which was the right answer as, if they were interested, they would go away and research themselves and thus use it as a tool to learn things independently. It was widely felt that by being told the answer, there was no learning involved that would stay in their head and, as such, I changed my design to suit these opinions.
 
 Initially, I also had a next button however, it was decided that it would be preferred to have the screen take you onto the next page by itself; again, I adjusted my code to accomadate this. I changed the time a number of times until 900ms was agreed to be about the right length.
 
 When it came to the results page, I had the score as a percentage however, the research group did not like this; they said they would prefer an actual number and, as such, I changed my design to also reflect this.
 
+In testing, it was also discovered the home pages were not working on the live site even though they were working on the development site; this was rectified and all buttons now work.
+
 <b><u>Home Page</u></b>
 
 ![homepage](assets/images/home.png)
 
-This is the first page a user encounters; it is simple and easy to use. I used Roman Numerals for the levels for added myth effect.<br>
+This is the first page a user encounters; it is simple and easy to navigate and my test group liked how clear it was. I used Roman Numerals for the levels for added myth effect.<br>
 
 <b><u>Quiz Pages</u></b>
 
@@ -34,13 +38,19 @@ This is the first page a user encounters; it is simple and easy to use. I used R
 
 ![questions2](assets/images/questions3.png)
 
-The container changes size to fit the question/answer size and the answer clicked changes colours in response to whether a question is correct/incorrect. For the home button, I used an icon so it wasn't too large and used something that resembled a historical building to fit the theme.<br>
+The container changes size to fit the question/answer size and the answer clicked changes colours in response to whether a question is correct/incorrect. For the home button, I used an icon so it wasn't too large and used something that resembled a historical building to fit the mythological theme.<br>
 
 <b><u>Score Page</u></b>
 
 ![score](assets/images/scorepage.png)
+![nousername](assets/images/nousername.png)
 
-The score page provides the user with their score and an option to submit their score to be added to the leaderboard; if you do this, after submitting you are automatically sent back to the home page. You can also navigate back to the home page without saving.
+The score page provides the user with their score and an option to submit their score to be added to the leaderboard; if you do this, after submitting you are automatically sent back to the home page. You can also navigate back to the home page without saving. If a username is not entered, the score cannot be saved.
+
+![0-5](assets/images/under5.png)
+![6-10](assets/images/6to10.png)
+![11+](assets/images/scoreover11.png)<br>
+I have also added two messages; one for if someone scores between 0&5, one for between 6&10 and one for 11+ to add some fun feedback on how someone has done.
 
 <b><u>Leaderboard</u></b>
 
@@ -54,7 +64,7 @@ The quiz has been tested by around 15 people on various devices and all have fou
 
 I created my Wireframes on the online site [Lucidchart](https://www.lucidchart.com).
 
-I wanted my design to be the same across all devices (just adjusting for screen size) and, as such, there is only one set.
+I wanted my design to be the same across all devices (just adjusting for screen size) and, as such, there is only one set. I wanted the format to be simple and easy to understand and not cluttered and over-complicated.
 
 <u>Home</u><br>
 
@@ -78,7 +88,7 @@ As a user, I want a quiz that is easily navigable on every page.<br>
 ![userstory2](assets/images/userstorynav1.png)<br>
 ![user.story2](assets/images/userstorynav2.png)<br>
 
-As a user, I want to know if I got a question right or wrong at the time of submitting an answer.
+As a user, I want to know if I got a question right or wrong at the time of submitting an answer.<br>
 As a user, I want to have my knowledge challenged and be encouraged to learn new things.<br>
 ![userstory3](assets/images/userstoryright.png)<br>
 ![userstry4](assets/images/userstorywrong.png)<br>
@@ -145,7 +155,7 @@ The site was created using HTML, CSS and JavaScript.
 
 [GTMetrix](https://gtmetrix.com/) to check site speed.
 
-[W3C](https://www.w3.org/) for code validation and also some hints and tips.
+[W3C](https://www.w3.org/) for code validation.
 
 [AmIResponsive](http://ami.responsivedesign.is/#) to check responsivity of the site.
 
@@ -165,4 +175,4 @@ My background image is from:<a href="https://pixabay.com/users/darkmoon_art-1664
 
 <b><u>Acknowledgements</u></b>
 
-With special thanks to James at Code Institute tutors who helped me see the glaringly obvious and to my daughter (the mythology expert) for creating such amazing (sometimes slightly impossible) questions.
+With special thanks to James at Code Institute tutors who helped me see the glaringly obvious, Aaron at Newcastle College and finally to my daughter (the mythology expert) for creating such amazing (sometimes slightly impossible) questions.
