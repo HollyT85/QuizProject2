@@ -367,6 +367,7 @@ const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
 const wholeScore=document.getElementById('wholeScore');
+const scoreComment=document.getElementById('scoreComment');
 
 //Different 'page' containers
 
@@ -385,7 +386,7 @@ const homeButtonEnd=document.getElementById('homeButtonEnd');
 //Quiz features
 
 let questionCounter=0;
-let numberOfQuestions=1;
+let numberOfQuestions=15;
 let currentQuestion;
 let availableQuestions=[];
 let availableAnswers=[];
@@ -470,6 +471,15 @@ function newQuestion () {
         gamePage.classList.add('hide');
         endPage.classList.remove('hide');
         wholeScore.innerHTML=score;
+    if (score >=0 && score <=5) {
+        scoreComment.innerHTML="Speak to Mimir to gain some knowledge!";
+    }
+    if (score >=6 && score <=10) {
+        scoreComment.innerHTML="Keep trying like Huracan;<br>he got there eventually!"
+    }
+    else if (score>=11) {
+        scoreComment.innerHTML="Nike is pleased with your victory.<br>This calls for grapes and cheese!";
+    }
 //local storage
         localStorage.setItem('currentScore', score);
     }

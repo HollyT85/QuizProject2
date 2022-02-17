@@ -104,6 +104,7 @@ body {
 .bi-bank{
     font-size: 3rem;
     color:#2e145d;
+    width:100%;
 }
 
 .btn-home {
@@ -114,10 +115,7 @@ body {
     border-radius: 10px;
     padding: 1rem;
 }
-.btn-home:hover {
-    background-color: #261342;
-    color: #fa8128;
-}
+
 /*Display of leaderboard*/
 
 .leaderboard-display {
@@ -149,10 +147,17 @@ body {
     color: #fa8128;
 }
 
+.btn-home:hover {
+    background-color: #261342;
+    color: #fa8128;
+}
+
 .bi-bank:hover {
     font-size: 3rem;
     background-color: #261342;
     color: #fa8128;
+    width: fit-content;
+    height: 100%;
 }
 
 .btn:hover{
