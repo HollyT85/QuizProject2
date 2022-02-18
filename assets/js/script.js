@@ -199,7 +199,7 @@ const questions= [
     },
     {
         Question: "How did sirens lure sailors to their death?",
-        Options:['Singing to them', 'Shouting hello', 'Prending to drown', 'Waving'],
+        Options:['Singing to them', 'Shouting hello', 'Pretending to drown', 'Waving'],
         correctAnswer:0,
         difficulty: "easy"
     },
@@ -330,8 +330,8 @@ const questions= [
         difficulty: "medium"
     },
     {
-        Question: "Nike is the Greek goddess of family",
-        Options: ['True','False'],
+        Question: "Who had to push a boulder up a hill for eternity?",
+        Options: ['Tantalus','Sisyphus', 'Ixiom', 'Marsyas'],
         correctAnswer: 1,
         difficulty: "medium"
     },
