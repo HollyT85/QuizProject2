@@ -545,9 +545,6 @@ function saveHighScore (e) {
         username: username.value,
         score: localStorage.getItem('currentScore')
     }
-    if (username="") {
-        alert ("Please enter a username");
-    }
     highScores.push(saveData);
 //Sort leaderboard by highest-lowest
     highScores.sort ((a, b)=> {
